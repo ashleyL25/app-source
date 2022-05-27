@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'Thorben';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("../thorben/thorben-regular.otf") format("OpenType");
+}
+
+@font-face {
+  font-family: 'Thorben';
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url("../thorben/thorben-bold.otf") format("OpenType");
+}
+
+@font-face {
+  font-family: 'Thorben';
+  font-style: normal;
+  font-weight: 100;
+  font-display: block;
+  src: url("../thorben/thorben-light.otf") format("OpenType");
+}
+
+@font-face {
+  font-family: 'Thorben';
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url("../thorben/thorben-bold.otf") format("OpenType");
+}
+
+@font-face {
+  font-family: 'Thorben';
+  font-style: normal;
+  font-weight: 600;
+  font-display: block;
+  src: url("../thorben/thorben-semibold.otf") format("OpenType");
+}
