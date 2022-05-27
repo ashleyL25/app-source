@@ -27,33 +27,56 @@
 
 @font-face {
     font-family: 'regular';
-    src: url(assets/fonts/Avenir-Roman.otf);
+    src: url(assets/fonts/Poppins-Regular.ttf);
+}
+  
+@font-face {
+    font-family: 'medium';
+    src: url(assets/fonts/Poppins-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'bold';
+    src: url(assets/fonts/Poppins-Bold.ttf);
 }
   
 @font-face {
     font-family: 'semi-bold';
-    src: url(assets/fonts/Avenir-Heavy.ttf);
+    src: url(assets/fonts/Poppins-SemiBold.ttf);
 }
-
+  
 @font-face {
-    font-family: 'medium';
-    src: url(assets/fonts/Avenir-Medium.ttf);
+    font-family: 'my-family';
+    src: url(assets/fonts/Pacifico-Regular.ttf);
 }
 
 *{
         font-family: 'regular';
 }
 
-ion-button{
-    letter-spacing: 0.6px;
+.footer-md::before {
+    background: none;
 }
 
-.slider_div {
-    .swiper-container-horizontal>.swiper-pagination-bullets {
-        bottom: -5px !important;
+
+ion-calendar {
+    .title {
+        position: absolute !important;
+        top: -12px !important;
+        right: 0 !important; 
     }
 }
 
-ion-button{
-    text-transform: capitalize;
+ion-modal.custom-modal{
+    .modal-wrapper{
+        width: 100% !important;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+    &.bottom {
+        align-items: flex-end !important;
+    }
+
+    --height: 300px;
+    align-items: flex-end;
 }

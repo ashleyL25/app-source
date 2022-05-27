@@ -1,5 +1,6 @@
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-register',
@@ -8,17 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterPage implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private navCtrl: NavController, private router: Router) { }
 
   ngOnInit() {
   }
 
-  goToHome() {
-      this.router.navigate(['/tabs']);
+  goBack() {
+      this.navCtrl.back();
   }
 
-  goToLogin() {
-      this.router.navigate(['/login']);
+  goToHome() {
+    this.router.navigate(['/tabs']);
   }
 
 }

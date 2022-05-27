@@ -1,4 +1,3 @@
-import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,43 +7,40 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePage implements OnInit {
 
-    tabID = 1;
-    activity = [
-        {
-            name : 'Amazon',
-            price : '- $35.88',
-            image : 'assets/imgs/cart.png',
-            color : '#FF7E87'
-        },
-        {
-            name : 'Shell',
-            price : '- $78.88',
-            image : 'assets/imgs/pump.png',
-            color : '#00D793  '
-        },
-        {
-            name : 'Shopping',
-            price : '- $50.92',
-            image : 'assets/imgs/cart.png',
-            color : '#FF7E87'
-        },
-    ];
+  orderDetail = [
+    {
+      status : 1,
+      time: '05:30',
+      activity : 'Trekking',
+      location : 'Lofoten',
+      img : 'assets/imgs/surfer.png'
+    },
+    {
+      status : 1,
+      time: '07:00',
+      activity : 'Breakfast',
+      location : 'at the Hotel',
+      img : 'assets/imgs/breakfast.png'
+    },
+    {
+      status : 1,
+      time: '08:30',
+      activity : 'Surfing',
+      location : 'on the Lake',
+      img : 'assets/imgs/surfer.png'
+    },
+    {
+      status : 0,
+      time: '11:30',
+      activity : 'Taking Some rest',
+      location : 'at the Hotel',
+      img : 'assets/imgs/bed.png'
+    },
+  ];
 
-    constructor(private route: Router) { }
+  constructor() { }
 
-    ngOnInit() {
-    }
-
-    goToTransfer() {
-        this.route.navigate(['/transfer']);
-    }
-
-    goToActivity() {
-        this.route.navigate(['/activity']);
-    }
-
-    goToAddBudget() {
-        this.route.navigate(['/add-budget']);
-    }
+  ngOnInit() {
+  }
 
 }

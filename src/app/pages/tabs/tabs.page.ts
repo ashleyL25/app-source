@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tabs',
@@ -8,16 +7,6 @@ import { Router } from '@angular/router';
 })
 export class TabsPage {
 
-  tabID;
-  constructor(
-    private router: Router
-  ) { }
+  constructor() {}
 
-  tabChange(eve) {
-    console.log(eve.tab);
-    this.tabID = eve.tab;
-  }
-  home() {
-    this.router.navigate(['tabs']);
-  }
 }

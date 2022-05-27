@@ -1,6 +1,7 @@
+import { ChangeTimezonePage } from './../change-timezone/change-timezone.page';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { NavController } from '@ionic/angular';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-settings',
@@ -9,21 +10,41 @@ import { NavController } from '@ionic/angular';
 })
 export class SettingsPage implements OnInit {
 
-  constructor(private navCtrl: NavController, private router: Router) { }
+    constructor(private router: Router, private modalCtrl: ModalController) { }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
 
-  goBack() {
-      this.navCtrl.back();
-  }
+    goToDiscount() {
+        this.router.navigate(['/discount']);
+    }
 
-  goToAddBudget() {
-      this.router.navigate(['add-budget']);
-  }
+    goToEditProfile() {
+        this.router.navigate(['/edit-profile']);
+    }
 
-  goToNotifications() {
-      this.router.navigate(['/tabs/notification']);
-  }
+    goToCards() {
+        this.router.navigate(['/card-list']);
+    }
+
+    goToNotification() {
+        this.router.navigate(['/notification']);
+    }
+
+    async goToTimezone() {
+        const modal = await this.modalCtrl.create({
+            component: ChangeTimezonePage,
+            cssClass: 'custom-modal'
+        });
+        return await modal.present();
+    }
+
+    logout() {
+        this.router.navigate(['/']);
+    }   
+
+    
+
+  
 
 }

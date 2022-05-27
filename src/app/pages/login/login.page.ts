@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class LoginPage implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private navCtrl: NavController, private router: Router) { }
 
   ngOnInit() {
   }
@@ -17,12 +18,8 @@ export class LoginPage implements OnInit {
       this.router.navigate(['/tabs']);
   }
 
-  goToRegister() {
-      this.router.navigate(['/register']);
-  }
-
-  goToForgot() {
-      this.router.navigate(['/forgot']);
+  goBack() {
+      this.navCtrl.back();
   }
 
 }

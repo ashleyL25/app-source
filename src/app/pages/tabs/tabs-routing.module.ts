@@ -12,20 +12,16 @@ const routes: Routes = [
         loadChildren: () => import('../home/home.module').then(m => m.HomePageModule)
       },
       {
-        path: 'expenses',
-        loadChildren: () => import('../expense/expense.module').then(m => m.ExpensePageModule)
+        path: 'plan',
+        loadChildren: () => import('../plan/plan.module').then(m => m.PlanPageModule)
       },
       {
-        path: 'wallet',
-        loadChildren: () => import('../wallet/wallet.module').then(m => m.WalletPageModule)
+        path: 'explore',
+        loadChildren: () => import('../explore/explore.module').then(m => m.ExplorePageModule)
       },
       {
-        path: 'notification',
-        loadChildren: () => import('../notification/notification.module').then(m => m.NotificationPageModule)
-      },
-      {
-        path: 'profile',
-        loadChildren: () => import('../profile/profile.module').then(m => m.ProfilePageModule)
+        path: 'settings',
+        loadChildren: () => import('../settings/settings.module').then(m => m.SettingsPageModule)
       },
       {
         path: '',

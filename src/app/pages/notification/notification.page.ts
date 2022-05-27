@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-notification',
@@ -8,56 +8,28 @@ import { NavController } from '@ionic/angular';
 })
 export class NotificationPage implements OnInit {
 
-  list = [
-    {
-        icn : 'card-outline',
-        text : 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-    },
-    {
-        icn : 'alarm-outline',
-        text : 'Temporibus vitae exercitationem quam totam sint labore',
-    },
-    {
-        icn : 'document-text-outline',
-        text : 'Sit amet consectetur adipisicing elit.',
-    },
-    {
-        icn : 'arrow-down',
-        text : 'Lorem ipsum temporibus vitae exercitationem',
-    },
-    {
-        icn : 'alarm-outline',
-        text : 'Elit temporibus vitae exercite quam totam sint labore?',
-    },
-    {
-        icn : 'arrow-up',
-        text : 'Sit amet consectetur adipisicing elit.',
-    },
-    {
-        icn : 'card-outline',
-        text : 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-    },
-    {
-        icn : 'alarm-outline',
-        text : 'Temporibus vitae exercitationem quam totam sint labore',
-    },
-    {
-        icn : 'document-text-outline',
-        text : 'Sit amet consectetur adipisicing elit.',
-    },
-    {
-        icn : 'arrow-down',
-        text : 'Lorem ipsum temporibus vitae exercitationem',
-    },
-    {
-        icn : 'alarm-outline',
-        text : 'Elit temporibus vitae exercite quam totam sint labore?',
-    },
-    {
-        icn : 'card-outline',
-        text : 'Sit amet consectetur adipisicing elit.',
-    },
-];
+  notifications = [
+      {
+          name : 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+          img : 'assets/imgs/sun.png',
+          date : '12/03/2021'
+      },
+      {
+          name : 'Aperiam neque incidunt tempora facere consequuntur magnam optio odit iusto tenetur',
+          img : 'assets/imgs/surfer.png',
+          date : '07/03/2021'
+      },
+      {
+          name : 'Ab porro a distinctio debitis ullam pariatur sequi nesciunt quis laudantium',
+          img : 'assets/imgs/cloudy.png',
+          date : '02/03/2021'
+      },
+      {
+          name : 'Alias praesentium, cumque earum iure eaque delectus accusamus sequi',
+          img : 'assets/imgs/breakfast.png',
+          date : '12/02/2021'
+      },  
+  ]
   constructor(private navCtrl: NavController) { }
 
   ngOnInit() {

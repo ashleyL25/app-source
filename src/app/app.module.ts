@@ -8,12 +8,19 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ChartsModule } from 'ng2-charts';
+import { IonicRatingModule } from 'ionic-rating';
+import { CalendarModule } from 'ion2-calendar';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, ChartsModule],
+  imports: [
+    BrowserModule,
+    IonicModule.forRoot(),
+    AppRoutingModule,
+    IonicRatingModule,
+    CalendarModule
+  ],
   providers: [
     StatusBar,
     SplashScreen,

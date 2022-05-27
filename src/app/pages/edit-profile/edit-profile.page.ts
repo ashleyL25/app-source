@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-edit-profile',
@@ -8,17 +8,13 @@ import { NavController } from '@ionic/angular';
 })
 export class EditProfilePage implements OnInit {
 
-  username = "Mausam Chavda";
-  email = 'mausam@gmail.com';
-  mobile = "9876543212";
-
   constructor(private navCtrl: NavController) { }
 
   ngOnInit() {
   }
 
-  goBack() {
-    this.navCtrl.back();
+  goToBack() {
+      this.navCtrl.back();
   }
 
 }
